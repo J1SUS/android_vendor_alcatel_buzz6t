@@ -1,4 +1,4 @@
-# Copyright (C) 2017-2020 The LineageOS Project
+# Copyright (C) 2017-2021 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -60,10 +60,9 @@ PRODUCT_COPY_FILES += \
     vendor/alcatel/buzz6t/proprietary/etc/permissions/qcrilhook.xml:system/etc/permissions/qcrilhook.xml \
     vendor/alcatel/buzz6t/proprietary/etc/quipc.conf:system/etc/quipc.conf \
     vendor/alcatel/buzz6t/proprietary/etc/sap.conf:system/etc/sap.conf \
-    vendor/alcatel/buzz6t/proprietary/lib/hw/camera.vendor.msm8909.so:system/lib/hw/camera.vendor.msm8909.so \
+    vendor/alcatel/buzz6t/proprietary/lib/hw/camera.msm8909.so:system/lib/hw/camera.msm8909.so \
     vendor/alcatel/buzz6t/proprietary/lib/hw/sensors.msm8909.so:system/lib/hw/sensors.msm8909.so \
     vendor/alcatel/buzz6t/proprietary/lib/libOmxSwVencMpeg4.so:system/lib/libOmxSwVencMpeg4.so \
-    vendor/alcatel/buzz6t/proprietary/lib/libdrmdecrypt.so:system/lib/libdrmdecrypt.so \
     vendor/alcatel/buzz6t/proprietary/lib/libloc_api_v02.so:system/lib/libloc_api_v02.so \
     vendor/alcatel/buzz6t/proprietary/lib/libloc_ds_api.so:system/lib/libloc_ds_api.so \
     vendor/alcatel/buzz6t/proprietary/lib/libmm-qcamera.so:system/lib/libmm-qcamera.so \
@@ -72,22 +71,18 @@ PRODUCT_COPY_FILES += \
     vendor/alcatel/buzz6t/proprietary/lib/libqomx_core.so:system/lib/libqomx_core.so \
     vendor/alcatel/buzz6t/proprietary/lib/libril.so:system/lib/libril.so \
     vendor/alcatel/buzz6t/proprietary/lib/librmnetctl.so:system/lib/librmnetctl.so \
+    vendor/alcatel/buzz6t/proprietary/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk:system/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk \
     vendor/alcatel/buzz6t/proprietary/vendor/bin/perfd:system/vendor/bin/perfd \
     vendor/alcatel/buzz6t/proprietary/vendor/bin/thermal-engine:system/vendor/bin/thermal-engine \
     vendor/alcatel/buzz6t/proprietary/vendor/etc/calmodule.cfg:system/vendor/etc/calmodule.cfg \
-    vendor/alcatel/buzz6t/proprietary/vendor/lib/drm/libdrmwvmplugin.so:system/vendor/lib/drm/libdrmwvmplugin.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/egl/eglsubAndroid.so:system/vendor/lib/egl/eglsubAndroid.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/egl/libEGL_adreno.so:system/vendor/lib/egl/libEGL_adreno.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/egl/libGLESv1_CM_adreno.so:system/vendor/lib/egl/libGLESv1_CM_adreno.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/egl/libGLESv2_adreno.so:system/vendor/lib/egl/libGLESv2_adreno.so \
-    vendor/alcatel/buzz6t/proprietary/vendor/lib/egl/libRBEGL_adreno.so:system/vendor/lib/egl/libRBEGL_adreno.so \
-    vendor/alcatel/buzz6t/proprietary/vendor/lib/egl/libRBGLESv1_CM_adreno.so:system/vendor/lib/egl/libRBGLESv1_CM_adreno.so \
-    vendor/alcatel/buzz6t/proprietary/vendor/lib/egl/libRBGLESv2_adreno.so:system/vendor/lib/egl/libRBGLESv2_adreno.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/egl/libq3dtools_adreno.so:system/vendor/lib/egl/libq3dtools_adreno.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/hw/flp.default.so:system/vendor/lib/hw/flp.default.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libC2D2.so:system/vendor/lib/libC2D2.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libCB.so:system/vendor/lib/libCB.so \
-    vendor/alcatel/buzz6t/proprietary/vendor/lib/libDivxDrm.so:system/vendor/lib/libDivxDrm.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libI420colorconvert.so:system/vendor/lib/libI420colorconvert.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libMpeg4SwEncoder.so:system/vendor/lib/libMpeg4SwEncoder.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libOmxAacDec.so:system/vendor/lib/libOmxAacDec.so \
@@ -97,19 +92,60 @@ PRODUCT_COPY_FILES += \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libOpenCL.so:system/vendor/lib/libOpenCL.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libQSEEComAPI.so:system/vendor/lib/libQSEEComAPI.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libRSDriver_adreno.so:system/vendor/lib/libRSDriver_adreno.so \
-    vendor/alcatel/buzz6t/proprietary/vendor/lib/libSHIMDivxDrm.so:system/vendor/lib/libSHIMDivxDrm.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libTimeService.so:system/vendor/lib/libTimeService.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libWVStreamControlAPI_L3.so:system/vendor/lib/libWVStreamControlAPI_L3.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libacdb-fts.so:system/vendor/lib/libacdb-fts.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libacdbloader.so:system/vendor/lib/libacdbloader.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libacdbmapper.so:system/vendor/lib/libacdbmapper.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libacdbrtac.so:system/vendor/lib/libacdbrtac.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libactuator_a3907.so:system/vendor/lib/libactuator_a3907.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libactuator_a3907_camcorder.so:system/vendor/lib/libactuator_a3907_camcorder.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libactuator_a3907_camera.so:system/vendor/lib/libactuator_a3907_camera.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libactuator_bu64297_q13v06k.so:system/vendor/lib/libactuator_bu64297_q13v06k.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libactuator_bu64297_q13v06k_camcorder.so:system/vendor/lib/libactuator_bu64297_q13v06k_camcorder.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libactuator_bu64297_q13v06k_camera.so:system/vendor/lib/libactuator_bu64297_q13v06k_camera.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libactuator_dw9714.so:system/vendor/lib/libactuator_dw9714.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libactuator_dw9714_13p1ba.so:system/vendor/lib/libactuator_dw9714_13p1ba.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libactuator_dw9714_13p1ba_camcorder.so:system/vendor/lib/libactuator_dw9714_13p1ba_camcorder.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libactuator_dw9714_13p1ba_camera.so:system/vendor/lib/libactuator_dw9714_13p1ba_camera.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libactuator_dw9714_camcorder.so:system/vendor/lib/libactuator_dw9714_camcorder.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libactuator_dw9714_camera.so:system/vendor/lib/libactuator_dw9714_camera.so \
-    vendor/alcatel/buzz6t/proprietary/vendor/lib/libactuator_dw9714_ov5670_csp.so:system/vendor/lib/libactuator_dw9714_ov5670_csp.so \
-    vendor/alcatel/buzz6t/proprietary/vendor/lib/libactuator_dw9714_ov5670_csp_camcorder.so:system/vendor/lib/libactuator_dw9714_ov5670_csp_camcorder.so \
-    vendor/alcatel/buzz6t/proprietary/vendor/lib/libactuator_dw9714_ov5670_csp_camera.so:system/vendor/lib/libactuator_dw9714_ov5670_csp_camera.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libactuator_dw9714_f8v05a.so:system/vendor/lib/libactuator_dw9714_f8v05a.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libactuator_dw9714_f8v05a_camcorder.so:system/vendor/lib/libactuator_dw9714_f8v05a_camcorder.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libactuator_dw9714_f8v05a_camera.so:system/vendor/lib/libactuator_dw9714_f8v05a_camera.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libactuator_dw9714_pc0fe.so:system/vendor/lib/libactuator_dw9714_pc0fe.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libactuator_dw9714_pc0fe_camcorder.so:system/vendor/lib/libactuator_dw9714_pc0fe_camcorder.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libactuator_dw9714_pc0fe_camera.so:system/vendor/lib/libactuator_dw9714_pc0fe_camera.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libactuator_dw9714_q13n04a.so:system/vendor/lib/libactuator_dw9714_q13n04a.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libactuator_dw9714_q13n04a_camcorder.so:system/vendor/lib/libactuator_dw9714_q13n04a_camcorder.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libactuator_dw9714_q13n04a_camera.so:system/vendor/lib/libactuator_dw9714_q13n04a_camera.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libactuator_dw9714_q13v04b.so:system/vendor/lib/libactuator_dw9714_q13v04b.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libactuator_dw9714_q13v04b_camcorder.so:system/vendor/lib/libactuator_dw9714_q13v04b_camcorder.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libactuator_dw9714_q13v04b_camera.so:system/vendor/lib/libactuator_dw9714_q13v04b_camera.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libactuator_dw9714_q8v19w.so:system/vendor/lib/libactuator_dw9714_q8v19w.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libactuator_dw9714_q8v19w_camcorder.so:system/vendor/lib/libactuator_dw9714_q8v19w_camcorder.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libactuator_dw9714_q8v19w_camera.so:system/vendor/lib/libactuator_dw9714_q8v19w_camera.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libactuator_dw9716.so:system/vendor/lib/libactuator_dw9716.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libactuator_dw9716_camcorder.so:system/vendor/lib/libactuator_dw9716_camcorder.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libactuator_dw9716_camera.so:system/vendor/lib/libactuator_dw9716_camera.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libactuator_dw9761b.so:system/vendor/lib/libactuator_dw9761b.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libactuator_dw9761b_camcorder.so:system/vendor/lib/libactuator_dw9761b_camcorder.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libactuator_dw9761b_camera.so:system/vendor/lib/libactuator_dw9761b_camera.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libactuator_dw9814_ov5675_sunrise.so:system/vendor/lib/libactuator_dw9814_ov5675_sunrise.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libactuator_dw9814_ov5675_sunrise_camcorder.so:system/vendor/lib/libactuator_dw9814_ov5675_sunrise_camcorder.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libactuator_dw9814_ov5675_sunrise_camera.so:system/vendor/lib/libactuator_dw9814_ov5675_sunrise_camera.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libactuator_iu074.so:system/vendor/lib/libactuator_iu074.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libactuator_iu074_camcorder.so:system/vendor/lib/libactuator_iu074_camcorder.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libactuator_iu074_camera.so:system/vendor/lib/libactuator_iu074_camera.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libactuator_ov12830.so:system/vendor/lib/libactuator_ov12830.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libactuator_ov12830_camcorder.so:system/vendor/lib/libactuator_ov12830_camcorder.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libactuator_ov12830_camera.so:system/vendor/lib/libactuator_ov12830_camera.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libactuator_ov8825.so:system/vendor/lib/libactuator_ov8825.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libactuator_ov8825_camcorder.so:system/vendor/lib/libactuator_ov8825_camcorder.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libactuator_ov8825_camera.so:system/vendor/lib/libactuator_ov8825_camera.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libactuator_rohm_bu64243gwz.so:system/vendor/lib/libactuator_rohm_bu64243gwz.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libactuator_rohm_bu64243gwz_camcorder.so:system/vendor/lib/libactuator_rohm_bu64243gwz_camcorder.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libactuator_rohm_bu64243gwz_camera.so:system/vendor/lib/libactuator_rohm_bu64243gwz_camera.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libadiertac.so:system/vendor/lib/libadiertac.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libadreno_utils.so:system/vendor/lib/libadreno_utils.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libadsprpc.so:system/vendor/lib/libadsprpc.so \
@@ -117,13 +153,161 @@ PRODUCT_COPY_FILES += \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libaudioalsa.so:system/vendor/lib/libaudioalsa.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libbtnv.so:system/vendor/lib/libbtnv.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libc2d30-a3xx.so:system/vendor/lib/libc2d30-a3xx.so \
-    vendor/alcatel/buzz6t/proprietary/vendor/lib/libcalmodule_akm.so:system/vendor/lib/libcalmodule_akm.so \
-    vendor/alcatel/buzz6t/proprietary/vendor/lib/libcalmodule_gyroscope.so:system/vendor/lib/libcalmodule_gyroscope.so \
-    vendor/alcatel/buzz6t/proprietary/vendor/lib/libcalmodule_senodia.so:system/vendor/lib/libcalmodule_senodia.so \
-    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_gc2355_8909_common.so:system/vendor/lib/libchromatix_gc2355_8909_common.so \
-    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_gc2355_8909_default_video.so:system/vendor/lib/libchromatix_gc2355_8909_default_video.so \
-    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_gc2355_8909_liveshot.so:system/vendor/lib/libchromatix_gc2355_8909_liveshot.so \
-    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_gc2355_8909_preview.so:system/vendor/lib/libchromatix_gc2355_8909_preview.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libcalmodule_akm09916.so:system/vendor/lib/libcalmodule_akm09916.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libcalmodule_common.so:system/vendor/lib/libcalmodule_common.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_S5K4E1_13P1BA_common.so:system/vendor/lib/libchromatix_S5K4E1_13P1BA_common.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_S5K4E1_13P1BA_default_video.so:system/vendor/lib/libchromatix_S5K4E1_13P1BA_default_video.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_S5K4E1_13P1BA_hfr_120fps.so:system/vendor/lib/libchromatix_S5K4E1_13P1BA_hfr_120fps.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_S5K4E1_13P1BA_hfr_60fps.so:system/vendor/lib/libchromatix_S5K4E1_13P1BA_hfr_60fps.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_S5K4E1_13P1BA_hfr_90fps.so:system/vendor/lib/libchromatix_S5K4E1_13P1BA_hfr_90fps.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_S5K4E1_13P1BA_liveshot.so:system/vendor/lib/libchromatix_S5K4E1_13P1BA_liveshot.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_S5K4E1_13P1BA_preview.so:system/vendor/lib/libchromatix_S5K4E1_13P1BA_preview.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_S5K4E1_13P1BA_snapshot.so:system/vendor/lib/libchromatix_S5K4E1_13P1BA_snapshot.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_S5K4E1_13P1BA_video_hd.so:system/vendor/lib/libchromatix_S5K4E1_13P1BA_video_hd.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_S5K4E1_13P1BA_zsl.so:system/vendor/lib/libchromatix_S5K4E1_13P1BA_zsl.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_SKUAA_ST_gc0339_common.so:system/vendor/lib/libchromatix_SKUAA_ST_gc0339_common.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_SKUAA_ST_gc0339_default_video.so:system/vendor/lib/libchromatix_SKUAA_ST_gc0339_default_video.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_SKUAA_ST_gc0339_preview.so:system/vendor/lib/libchromatix_SKUAA_ST_gc0339_preview.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_SKUAB_ST_s5k4e1_common.so:system/vendor/lib/libchromatix_SKUAB_ST_s5k4e1_common.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_SKUAB_ST_s5k4e1_default_video.so:system/vendor/lib/libchromatix_SKUAB_ST_s5k4e1_default_video.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_SKUAB_ST_s5k4e1_hfr_120fps.so:system/vendor/lib/libchromatix_SKUAB_ST_s5k4e1_hfr_120fps.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_SKUAB_ST_s5k4e1_hfr_60fps.so:system/vendor/lib/libchromatix_SKUAB_ST_s5k4e1_hfr_60fps.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_SKUAB_ST_s5k4e1_hfr_90fps.so:system/vendor/lib/libchromatix_SKUAB_ST_s5k4e1_hfr_90fps.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_SKUAB_ST_s5k4e1_liveshot.so:system/vendor/lib/libchromatix_SKUAB_ST_s5k4e1_liveshot.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_SKUAB_ST_s5k4e1_preview.so:system/vendor/lib/libchromatix_SKUAB_ST_s5k4e1_preview.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_SKUAB_ST_s5k4e1_snapshot.so:system/vendor/lib/libchromatix_SKUAB_ST_s5k4e1_snapshot.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_SKUAB_ST_s5k4e1_video_hd.so:system/vendor/lib/libchromatix_SKUAB_ST_s5k4e1_video_hd.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_SKUAB_ST_s5k4e1_zsl.so:system/vendor/lib/libchromatix_SKUAB_ST_s5k4e1_zsl.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ar0542_common.so:system/vendor/lib/libchromatix_ar0542_common.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ar0542_default_video.so:system/vendor/lib/libchromatix_ar0542_default_video.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ar0542_liveshot.so:system/vendor/lib/libchromatix_ar0542_liveshot.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ar0542_preview.so:system/vendor/lib/libchromatix_ar0542_preview.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ar0542_snapshot.so:system/vendor/lib/libchromatix_ar0542_snapshot.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_gc2375_ewelly_gophone_common.so:system/vendor/lib/libchromatix_gc2375_ewelly_gophone_common.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_gc2375_ewelly_gophone_preview.so:system/vendor/lib/libchromatix_gc2375_ewelly_gophone_preview.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_hi553_gophone_common.so:system/vendor/lib/libchromatix_hi553_gophone_common.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_hi553_gophone_default_video.so:system/vendor/lib/libchromatix_hi553_gophone_default_video.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_hi553_gophone_hfr_120fps.so:system/vendor/lib/libchromatix_hi553_gophone_hfr_120fps.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_hi553_gophone_hfr_60fps.so:system/vendor/lib/libchromatix_hi553_gophone_hfr_60fps.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_hi553_gophone_hfr_90fps.so:system/vendor/lib/libchromatix_hi553_gophone_hfr_90fps.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_hi553_gophone_liveshot.so:system/vendor/lib/libchromatix_hi553_gophone_liveshot.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_hi553_gophone_preview.so:system/vendor/lib/libchromatix_hi553_gophone_preview.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_hi553_gophone_snapshot.so:system/vendor/lib/libchromatix_hi553_gophone_snapshot.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_hi553_gophone_video_hd.so:system/vendor/lib/libchromatix_hi553_gophone_video_hd.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_hi553_gophone_zsl.so:system/vendor/lib/libchromatix_hi553_gophone_zsl.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_imx132_common.so:system/vendor/lib/libchromatix_imx132_common.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_imx132_default_video.so:system/vendor/lib/libchromatix_imx132_default_video.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_imx132_liveshot.so:system/vendor/lib/libchromatix_imx132_liveshot.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_imx132_preview.so:system/vendor/lib/libchromatix_imx132_preview.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_imx132_snapshot.so:system/vendor/lib/libchromatix_imx132_snapshot.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_imx134_common.so:system/vendor/lib/libchromatix_imx134_common.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_imx134_default_video.so:system/vendor/lib/libchromatix_imx134_default_video.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_imx134_hfr_120.so:system/vendor/lib/libchromatix_imx134_hfr_120.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_imx134_hfr_60.so:system/vendor/lib/libchromatix_imx134_hfr_60.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_imx134_preview.so:system/vendor/lib/libchromatix_imx134_preview.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_imx134_snapshot.so:system/vendor/lib/libchromatix_imx134_snapshot.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_imx135_adrc.so:system/vendor/lib/libchromatix_imx135_adrc.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_imx135_common.so:system/vendor/lib/libchromatix_imx135_common.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_imx135_default_video.so:system/vendor/lib/libchromatix_imx135_default_video.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_imx135_hfr_120.so:system/vendor/lib/libchromatix_imx135_hfr_120.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_imx135_hfr_60.so:system/vendor/lib/libchromatix_imx135_hfr_60.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_imx135_hfr_90.so:system/vendor/lib/libchromatix_imx135_hfr_90.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_imx135_liveshot.so:system/vendor/lib/libchromatix_imx135_liveshot.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_imx135_preview.so:system/vendor/lib/libchromatix_imx135_preview.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_imx135_snapshot.so:system/vendor/lib/libchromatix_imx135_snapshot.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_imx135_video_hd.so:system/vendor/lib/libchromatix_imx135_video_hd.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_imx214_common.so:system/vendor/lib/libchromatix_imx214_common.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_imx214_default_video.so:system/vendor/lib/libchromatix_imx214_default_video.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_imx214_hfr_120fps.so:system/vendor/lib/libchromatix_imx214_hfr_120fps.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_imx214_hfr_60fps.so:system/vendor/lib/libchromatix_imx214_hfr_60fps.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_imx214_hfr_90fps.so:system/vendor/lib/libchromatix_imx214_hfr_90fps.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_imx214_liveshot.so:system/vendor/lib/libchromatix_imx214_liveshot.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_imx214_preview.so:system/vendor/lib/libchromatix_imx214_preview.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_imx214_snapshot.so:system/vendor/lib/libchromatix_imx214_snapshot.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_imx214_snapshot_hdr.so:system/vendor/lib/libchromatix_imx214_snapshot_hdr.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_imx214_video_1080p.so:system/vendor/lib/libchromatix_imx214_video_1080p.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_imx214_video_hdr.so:system/vendor/lib/libchromatix_imx214_video_hdr.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov13850_common.so:system/vendor/lib/libchromatix_ov13850_common.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov13850_default_video.so:system/vendor/lib/libchromatix_ov13850_default_video.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov13850_hfr_120fps.so:system/vendor/lib/libchromatix_ov13850_hfr_120fps.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov13850_hfr_60fps.so:system/vendor/lib/libchromatix_ov13850_hfr_60fps.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov13850_hfr_90fps.so:system/vendor/lib/libchromatix_ov13850_hfr_90fps.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov13850_preview.so:system/vendor/lib/libchromatix_ov13850_preview.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov13850_q13v06k_common.so:system/vendor/lib/libchromatix_ov13850_q13v06k_common.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov13850_q13v06k_default_video.so:system/vendor/lib/libchromatix_ov13850_q13v06k_default_video.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov13850_q13v06k_hfr_120fps.so:system/vendor/lib/libchromatix_ov13850_q13v06k_hfr_120fps.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov13850_q13v06k_hfr_60fps.so:system/vendor/lib/libchromatix_ov13850_q13v06k_hfr_60fps.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov13850_q13v06k_hfr_90fps.so:system/vendor/lib/libchromatix_ov13850_q13v06k_hfr_90fps.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov13850_q13v06k_preview.so:system/vendor/lib/libchromatix_ov13850_q13v06k_preview.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov13850_q13v06k_snapshot.so:system/vendor/lib/libchromatix_ov13850_q13v06k_snapshot.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov13850_snapshot.so:system/vendor/lib/libchromatix_ov13850_snapshot.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov16825_common.so:system/vendor/lib/libchromatix_ov16825_common.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov16825_default_video.so:system/vendor/lib/libchromatix_ov16825_default_video.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov16825_preview.so:system/vendor/lib/libchromatix_ov16825_preview.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov16825_snapshot.so:system/vendor/lib/libchromatix_ov16825_snapshot.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov2680_5987fhq_common.so:system/vendor/lib/libchromatix_ov2680_5987fhq_common.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov2680_5987fhq_common_v32.so:system/vendor/lib/libchromatix_ov2680_5987fhq_common_v32.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov2680_5987fhq_default_video.so:system/vendor/lib/libchromatix_ov2680_5987fhq_default_video.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov2680_5987fhq_default_video_v32.so:system/vendor/lib/libchromatix_ov2680_5987fhq_default_video_v32.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov2680_5987fhq_preview.so:system/vendor/lib/libchromatix_ov2680_5987fhq_preview.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov2680_5987fhq_preview_v32.so:system/vendor/lib/libchromatix_ov2680_5987fhq_preview_v32.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov2680_5987fhq_snapshot.so:system/vendor/lib/libchromatix_ov2680_5987fhq_snapshot.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov2680_5987fhq_snapshot_v32.so:system/vendor/lib/libchromatix_ov2680_5987fhq_snapshot_v32.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov2680_cht852b_common.so:system/vendor/lib/libchromatix_ov2680_cht852b_common.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov2680_cht852b_default_video.so:system/vendor/lib/libchromatix_ov2680_cht852b_default_video.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov2680_cht852b_preview.so:system/vendor/lib/libchromatix_ov2680_cht852b_preview.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov2680_cht852b_snapshot.so:system/vendor/lib/libchromatix_ov2680_cht852b_snapshot.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov2680_common.so:system/vendor/lib/libchromatix_ov2680_common.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov2680_default_video.so:system/vendor/lib/libchromatix_ov2680_default_video.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov2680_preview.so:system/vendor/lib/libchromatix_ov2680_preview.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov2680_snapshot.so:system/vendor/lib/libchromatix_ov2680_snapshot.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov2680_zs2p80f1_common.so:system/vendor/lib/libchromatix_ov2680_zs2p80f1_common.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov2680_zs2p80f1_default_video.so:system/vendor/lib/libchromatix_ov2680_zs2p80f1_default_video.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov2680_zs2p80f1_preview.so:system/vendor/lib/libchromatix_ov2680_zs2p80f1_preview.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov2680_zs2p80f1_snapshot.so:system/vendor/lib/libchromatix_ov2680_zs2p80f1_snapshot.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov2720_common.so:system/vendor/lib/libchromatix_ov2720_common.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov2720_default_video.so:system/vendor/lib/libchromatix_ov2720_default_video.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov2720_hfr.so:system/vendor/lib/libchromatix_ov2720_hfr.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov2720_liveshot.so:system/vendor/lib/libchromatix_ov2720_liveshot.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov2720_preview.so:system/vendor/lib/libchromatix_ov2720_preview.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov2720_zsl.so:system/vendor/lib/libchromatix_ov2720_zsl.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov5648_oty5f03_common.so:system/vendor/lib/libchromatix_ov5648_oty5f03_common.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov5648_oty5f03_default_video.so:system/vendor/lib/libchromatix_ov5648_oty5f03_default_video.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov5648_oty5f03_preview.so:system/vendor/lib/libchromatix_ov5648_oty5f03_preview.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov5648_oty5f03_snapshot.so:system/vendor/lib/libchromatix_ov5648_oty5f03_snapshot.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov5648_oty5f03_zsl.so:system/vendor/lib/libchromatix_ov5648_oty5f03_zsl.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov5648_p5v18g_common.so:system/vendor/lib/libchromatix_ov5648_p5v18g_common.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov5648_p5v18g_default_video.so:system/vendor/lib/libchromatix_ov5648_p5v18g_default_video.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov5648_p5v18g_default_video_hd.so:system/vendor/lib/libchromatix_ov5648_p5v18g_default_video_hd.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov5648_p5v18g_preview.so:system/vendor/lib/libchromatix_ov5648_p5v18g_preview.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov5648_p5v18g_snapshot.so:system/vendor/lib/libchromatix_ov5648_p5v18g_snapshot.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov5648_p5v18g_zsl.so:system/vendor/lib/libchromatix_ov5648_p5v18g_zsl.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov5648_q5v22e_common.so:system/vendor/lib/libchromatix_ov5648_q5v22e_common.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov5648_q5v22e_default_video.so:system/vendor/lib/libchromatix_ov5648_q5v22e_default_video.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov5648_q5v22e_default_video_hd.so:system/vendor/lib/libchromatix_ov5648_q5v22e_default_video_hd.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov5648_q5v22e_preview.so:system/vendor/lib/libchromatix_ov5648_q5v22e_preview.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov5648_q5v22e_snapshot.so:system/vendor/lib/libchromatix_ov5648_q5v22e_snapshot.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov5648_q5v22e_zsl.so:system/vendor/lib/libchromatix_ov5648_q5v22e_zsl.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov5670_30010a3_common.so:system/vendor/lib/libchromatix_ov5670_30010a3_common.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov5670_30010a3_default_video.so:system/vendor/lib/libchromatix_ov5670_30010a3_default_video.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov5670_30010a3_hfr_120fps.so:system/vendor/lib/libchromatix_ov5670_30010a3_hfr_120fps.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov5670_30010a3_hfr_60fps.so:system/vendor/lib/libchromatix_ov5670_30010a3_hfr_60fps.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov5670_30010a3_hfr_90fps.so:system/vendor/lib/libchromatix_ov5670_30010a3_hfr_90fps.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov5670_30010a3_liveshot.so:system/vendor/lib/libchromatix_ov5670_30010a3_liveshot.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov5670_30010a3_preview.so:system/vendor/lib/libchromatix_ov5670_30010a3_preview.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov5670_30010a3_snapshot.so:system/vendor/lib/libchromatix_ov5670_30010a3_snapshot.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov5670_30010a3_video_hd.so:system/vendor/lib/libchromatix_ov5670_30010a3_video_hd.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov5670_30010a3_zsl.so:system/vendor/lib/libchromatix_ov5670_30010a3_zsl.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov5670_q5v41b_common.so:system/vendor/lib/libchromatix_ov5670_q5v41b_common.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov5670_q5v41b_default_video.so:system/vendor/lib/libchromatix_ov5670_q5v41b_default_video.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov5670_q5v41b_hfr_120fps.so:system/vendor/lib/libchromatix_ov5670_q5v41b_hfr_120fps.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov5670_q5v41b_hfr_60fps.so:system/vendor/lib/libchromatix_ov5670_q5v41b_hfr_60fps.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov5670_q5v41b_hfr_90fps.so:system/vendor/lib/libchromatix_ov5670_q5v41b_hfr_90fps.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov5670_q5v41b_liveshot.so:system/vendor/lib/libchromatix_ov5670_q5v41b_liveshot.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov5670_q5v41b_preview.so:system/vendor/lib/libchromatix_ov5670_q5v41b_preview.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov5670_q5v41b_snapshot.so:system/vendor/lib/libchromatix_ov5670_q5v41b_snapshot.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov5670_q5v41b_video_hd.so:system/vendor/lib/libchromatix_ov5670_q5v41b_video_hd.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov5670_q5v41b_zsl.so:system/vendor/lib/libchromatix_ov5670_q5v41b_zsl.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov5670_qc700_common.so:system/vendor/lib/libchromatix_ov5670_qc700_common.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov5670_qc700_default_video.so:system/vendor/lib/libchromatix_ov5670_qc700_default_video.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov5670_qc700_hfr_120fps.so:system/vendor/lib/libchromatix_ov5670_qc700_hfr_120fps.so \
@@ -134,10 +318,127 @@ PRODUCT_COPY_FILES += \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov5670_qc700_snapshot.so:system/vendor/lib/libchromatix_ov5670_qc700_snapshot.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov5670_qc700_video_hd.so:system/vendor/lib/libchromatix_ov5670_qc700_video_hd.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov5670_qc700_zsl.so:system/vendor/lib/libchromatix_ov5670_qc700_zsl.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov5675_d5v15b_common.so:system/vendor/lib/libchromatix_ov5675_d5v15b_common.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov5675_d5v15b_default_video.so:system/vendor/lib/libchromatix_ov5675_d5v15b_default_video.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov5675_d5v15b_hfr_120fps.so:system/vendor/lib/libchromatix_ov5675_d5v15b_hfr_120fps.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov5675_d5v15b_hfr_60fps.so:system/vendor/lib/libchromatix_ov5675_d5v15b_hfr_60fps.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov5675_d5v15b_hfr_90fps.so:system/vendor/lib/libchromatix_ov5675_d5v15b_hfr_90fps.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov5675_d5v15b_liveshot.so:system/vendor/lib/libchromatix_ov5675_d5v15b_liveshot.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov5675_d5v15b_preview.so:system/vendor/lib/libchromatix_ov5675_d5v15b_preview.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov5675_d5v15b_snapshot.so:system/vendor/lib/libchromatix_ov5675_d5v15b_snapshot.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov5675_d5v15b_zsl.so:system/vendor/lib/libchromatix_ov5675_d5v15b_zsl.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov5675_sunrise_gophone_common.so:system/vendor/lib/libchromatix_ov5675_sunrise_gophone_common.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov5675_sunrise_gophone_default_video.so:system/vendor/lib/libchromatix_ov5675_sunrise_gophone_default_video.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov5675_sunrise_gophone_hfr_120fps.so:system/vendor/lib/libchromatix_ov5675_sunrise_gophone_hfr_120fps.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov5675_sunrise_gophone_hfr_60fps.so:system/vendor/lib/libchromatix_ov5675_sunrise_gophone_hfr_60fps.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov5675_sunrise_gophone_hfr_90fps.so:system/vendor/lib/libchromatix_ov5675_sunrise_gophone_hfr_90fps.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov5675_sunrise_gophone_liveshot.so:system/vendor/lib/libchromatix_ov5675_sunrise_gophone_liveshot.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov5675_sunrise_gophone_preview.so:system/vendor/lib/libchromatix_ov5675_sunrise_gophone_preview.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov5675_sunrise_gophone_snapshot.so:system/vendor/lib/libchromatix_ov5675_sunrise_gophone_snapshot.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov5675_sunrise_gophone_zsl.so:system/vendor/lib/libchromatix_ov5675_sunrise_gophone_zsl.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov8825_common.so:system/vendor/lib/libchromatix_ov8825_common.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov8825_default_video.so:system/vendor/lib/libchromatix_ov8825_default_video.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov8825_hfr_120fps.so:system/vendor/lib/libchromatix_ov8825_hfr_120fps.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov8825_hfr_60fps.so:system/vendor/lib/libchromatix_ov8825_hfr_60fps.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov8825_hfr_90fps.so:system/vendor/lib/libchromatix_ov8825_hfr_90fps.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov8825_liveshot.so:system/vendor/lib/libchromatix_ov8825_liveshot.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov8825_liveshot_hd.so:system/vendor/lib/libchromatix_ov8825_liveshot_hd.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov8825_preview.so:system/vendor/lib/libchromatix_ov8825_preview.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov8825_preview_hd.so:system/vendor/lib/libchromatix_ov8825_preview_hd.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov8825_snapshot.so:system/vendor/lib/libchromatix_ov8825_snapshot.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov8825_snapshot_hd.so:system/vendor/lib/libchromatix_ov8825_snapshot_hd.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov8825_video_hd.so:system/vendor/lib/libchromatix_ov8825_video_hd.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov8825_zsl.so:system/vendor/lib/libchromatix_ov8825_zsl.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov8856_f8v05a_common.so:system/vendor/lib/libchromatix_ov8856_f8v05a_common.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov8856_f8v05a_default_video.so:system/vendor/lib/libchromatix_ov8856_f8v05a_default_video.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov8856_f8v05a_hfr_120fps.so:system/vendor/lib/libchromatix_ov8856_f8v05a_hfr_120fps.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov8856_f8v05a_hfr_60fps.so:system/vendor/lib/libchromatix_ov8856_f8v05a_hfr_60fps.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov8856_f8v05a_hfr_90fps.so:system/vendor/lib/libchromatix_ov8856_f8v05a_hfr_90fps.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov8856_f8v05a_liveshot.so:system/vendor/lib/libchromatix_ov8856_f8v05a_liveshot.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov8856_f8v05a_preview.so:system/vendor/lib/libchromatix_ov8856_f8v05a_preview.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov8856_f8v05a_snapshot.so:system/vendor/lib/libchromatix_ov8856_f8v05a_snapshot.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov8856_f8v05a_zsl.so:system/vendor/lib/libchromatix_ov8856_f8v05a_zsl.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov8858_common.so:system/vendor/lib/libchromatix_ov8858_common.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov8858_default_video.so:system/vendor/lib/libchromatix_ov8858_default_video.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov8858_hfr_120fps.so:system/vendor/lib/libchromatix_ov8858_hfr_120fps.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov8858_hfr_60fps.so:system/vendor/lib/libchromatix_ov8858_hfr_60fps.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov8858_hfr_90fps.so:system/vendor/lib/libchromatix_ov8858_hfr_90fps.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov8858_liveshot.so:system/vendor/lib/libchromatix_ov8858_liveshot.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov8858_preview.so:system/vendor/lib/libchromatix_ov8858_preview.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov8858_q8v19w_common.so:system/vendor/lib/libchromatix_ov8858_q8v19w_common.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov8858_q8v19w_default_video.so:system/vendor/lib/libchromatix_ov8858_q8v19w_default_video.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov8858_q8v19w_hfr_120fps.so:system/vendor/lib/libchromatix_ov8858_q8v19w_hfr_120fps.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov8858_q8v19w_hfr_60fps.so:system/vendor/lib/libchromatix_ov8858_q8v19w_hfr_60fps.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov8858_q8v19w_hfr_90fps.so:system/vendor/lib/libchromatix_ov8858_q8v19w_hfr_90fps.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov8858_q8v19w_liveshot.so:system/vendor/lib/libchromatix_ov8858_q8v19w_liveshot.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov8858_q8v19w_preview.so:system/vendor/lib/libchromatix_ov8858_q8v19w_preview.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov8858_q8v19w_snapshot.so:system/vendor/lib/libchromatix_ov8858_q8v19w_snapshot.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov8858_q8v19w_video_nonHD.so:system/vendor/lib/libchromatix_ov8858_q8v19w_video_nonHD.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov8858_q8v19w_zsl.so:system/vendor/lib/libchromatix_ov8858_q8v19w_zsl.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov8858_q8v19w_zsl_30.so:system/vendor/lib/libchromatix_ov8858_q8v19w_zsl_30.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov8858_snapshot.so:system/vendor/lib/libchromatix_ov8858_snapshot.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov8865_q8v18a_common.so:system/vendor/lib/libchromatix_ov8865_q8v18a_common.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov8865_q8v18a_default_video.so:system/vendor/lib/libchromatix_ov8865_q8v18a_default_video.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov8865_q8v18a_hfr_120fps.so:system/vendor/lib/libchromatix_ov8865_q8v18a_hfr_120fps.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov8865_q8v18a_hfr_60fps.so:system/vendor/lib/libchromatix_ov8865_q8v18a_hfr_60fps.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov8865_q8v18a_hfr_90fps.so:system/vendor/lib/libchromatix_ov8865_q8v18a_hfr_90fps.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov8865_q8v18a_liveshot.so:system/vendor/lib/libchromatix_ov8865_q8v18a_liveshot.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov8865_q8v18a_preview.so:system/vendor/lib/libchromatix_ov8865_q8v18a_preview.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov8865_q8v18a_snapshot.so:system/vendor/lib/libchromatix_ov8865_q8v18a_snapshot.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov8865_q8v18a_video_hd.so:system/vendor/lib/libchromatix_ov8865_q8v18a_video_hd.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov8865_q8v18a_zsl.so:system/vendor/lib/libchromatix_ov8865_q8v18a_zsl.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov9724_common.so:system/vendor/lib/libchromatix_ov9724_common.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov9724_default_video.so:system/vendor/lib/libchromatix_ov9724_default_video.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov9724_liveshot.so:system/vendor/lib/libchromatix_ov9724_liveshot.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_ov9724_preview.so:system/vendor/lib/libchromatix_ov9724_preview.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_s5k3l1yx_common.so:system/vendor/lib/libchromatix_s5k3l1yx_common.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_s5k3l1yx_default_video.so:system/vendor/lib/libchromatix_s5k3l1yx_default_video.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_s5k3l1yx_hfr_120fps.so:system/vendor/lib/libchromatix_s5k3l1yx_hfr_120fps.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_s5k3l1yx_hfr_60fps.so:system/vendor/lib/libchromatix_s5k3l1yx_hfr_60fps.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_s5k3l1yx_hfr_90fps.so:system/vendor/lib/libchromatix_s5k3l1yx_hfr_90fps.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_s5k3l1yx_liveshot.so:system/vendor/lib/libchromatix_s5k3l1yx_liveshot.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_s5k3l1yx_preview.so:system/vendor/lib/libchromatix_s5k3l1yx_preview.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_s5k3l1yx_snapshot.so:system/vendor/lib/libchromatix_s5k3l1yx_snapshot.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_s5k3l1yx_video_hd.so:system/vendor/lib/libchromatix_s5k3l1yx_video_hd.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_s5k3l1yx_zsl.so:system/vendor/lib/libchromatix_s5k3l1yx_zsl.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_s5k3m2xm_common.so:system/vendor/lib/libchromatix_s5k3m2xm_common.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_s5k3m2xm_default_video.so:system/vendor/lib/libchromatix_s5k3m2xm_default_video.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_s5k3m2xm_hfr_120.so:system/vendor/lib/libchromatix_s5k3m2xm_hfr_120.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_s5k3m2xm_hfr_60.so:system/vendor/lib/libchromatix_s5k3m2xm_hfr_60.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_s5k3m2xm_hfr_90.so:system/vendor/lib/libchromatix_s5k3m2xm_hfr_90.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_s5k3m2xm_liveshot.so:system/vendor/lib/libchromatix_s5k3m2xm_liveshot.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_s5k3m2xm_preview.so:system/vendor/lib/libchromatix_s5k3m2xm_preview.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_s5k3m2xm_snapshot.so:system/vendor/lib/libchromatix_s5k3m2xm_snapshot.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_skuab_shinetech_gc0339_common.so:system/vendor/lib/libchromatix_skuab_shinetech_gc0339_common.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_skuab_shinetech_gc0339_default_video.so:system/vendor/lib/libchromatix_skuab_shinetech_gc0339_default_video.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_skuab_shinetech_gc0339_liveshot.so:system/vendor/lib/libchromatix_skuab_shinetech_gc0339_liveshot.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_skuab_shinetech_gc0339_preview.so:system/vendor/lib/libchromatix_skuab_shinetech_gc0339_preview.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_skuab_shinetech_gc0339_snapshot.so:system/vendor/lib/libchromatix_skuab_shinetech_gc0339_snapshot.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_skuab_shinetech_gc0339_zsl.so:system/vendor/lib/libchromatix_skuab_shinetech_gc0339_zsl.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_skuf_ov12830_p12v01c_common.so:system/vendor/lib/libchromatix_skuf_ov12830_p12v01c_common.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_skuf_ov12830_p12v01c_default_video.so:system/vendor/lib/libchromatix_skuf_ov12830_p12v01c_default_video.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_skuf_ov12830_p12v01c_hfr_120fps.so:system/vendor/lib/libchromatix_skuf_ov12830_p12v01c_hfr_120fps.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_skuf_ov12830_p12v01c_hfr_60fps.so:system/vendor/lib/libchromatix_skuf_ov12830_p12v01c_hfr_60fps.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_skuf_ov12830_p12v01c_hfr_90fps.so:system/vendor/lib/libchromatix_skuf_ov12830_p12v01c_hfr_90fps.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_skuf_ov12830_p12v01c_preview.so:system/vendor/lib/libchromatix_skuf_ov12830_p12v01c_preview.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_skuf_ov12830_p12v01c_snapshot.so:system/vendor/lib/libchromatix_skuf_ov12830_p12v01c_snapshot.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_skuf_ov12830_p12v01c_video_hd.so:system/vendor/lib/libchromatix_skuf_ov12830_p12v01c_video_hd.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_skuf_ov12830_p12v01c_zsl.so:system/vendor/lib/libchromatix_skuf_ov12830_p12v01c_zsl.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_skuf_ov5648_p5v23c_common.so:system/vendor/lib/libchromatix_skuf_ov5648_p5v23c_common.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_skuf_ov5648_p5v23c_default_video.so:system/vendor/lib/libchromatix_skuf_ov5648_p5v23c_default_video.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_skuf_ov5648_p5v23c_preview.so:system/vendor/lib/libchromatix_skuf_ov5648_p5v23c_preview.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_skuf_ov5648_p5v23c_snapshot.so:system/vendor/lib/libchromatix_skuf_ov5648_p5v23c_snapshot.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_sp2509_sunrise_gophone_common.so:system/vendor/lib/libchromatix_sp2509_sunrise_gophone_common.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_sp2509_sunrise_gophone_default_video.so:system/vendor/lib/libchromatix_sp2509_sunrise_gophone_default_video.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_sp2509_sunrise_gophone_liveshot.so:system/vendor/lib/libchromatix_sp2509_sunrise_gophone_liveshot.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_sp2509_sunrise_gophone_preview.so:system/vendor/lib/libchromatix_sp2509_sunrise_gophone_preview.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_sp2509_sunrise_gophone_snapshot.so:system/vendor/lib/libchromatix_sp2509_sunrise_gophone_snapshot.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libchromatix_sp2509_sunrise_gophone_zsl.so:system/vendor/lib/libchromatix_sp2509_sunrise_gophone_zsl.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libcneapiclient.so:system/vendor/lib/libcneapiclient.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libconfigdb.so:system/vendor/lib/libconfigdb.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libdiag.so:system/vendor/lib/libdiag.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libdisp-aba.so:system/vendor/lib/libdisp-aba.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libdrmdecrypt.so:system/vendor/lib/libdrmdecrypt.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libdrmfs.so:system/vendor/lib/libdrmfs.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libdrmtime.so:system/vendor/lib/libdrmtime.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libdsi_netctrl.so:system/vendor/lib/libdsi_netctrl.so \
@@ -148,8 +449,6 @@ PRODUCT_COPY_FILES += \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libgsl.so:system/vendor/lib/libgsl.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libidl.so:system/vendor/lib/libidl.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libizat_core.so:system/vendor/lib/libizat_core.so \
-    vendor/alcatel/buzz6t/proprietary/vendor/lib/libjpegdhw.so:system/vendor/lib/libjpegdhw.so \
-    vendor/alcatel/buzz6t/proprietary/vendor/lib/libjpegehw.so:system/vendor/lib/libjpegehw.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/liblbs_core.so:system/vendor/lib/liblbs_core.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libllvm-qcom.so:system/vendor/lib/libllvm-qcom.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libmdmdetect.so:system/vendor/lib/libmdmdetect.so \
@@ -159,24 +458,88 @@ PRODUCT_COPY_FILES += \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libmm-color-convertor.so:system/vendor/lib/libmm-color-convertor.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libmm-qdcm.so:system/vendor/lib/libmm-qdcm.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera2_c2d_module.so:system/vendor/lib/libmmcamera2_c2d_module.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera2_cpp_module.so:system/vendor/lib/libmmcamera2_cpp_module.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera2_frame_algorithm.so:system/vendor/lib/libmmcamera2_frame_algorithm.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera2_iface_modules.so:system/vendor/lib/libmmcamera2_iface_modules.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera2_imglib_modules.so:system/vendor/lib/libmmcamera2_imglib_modules.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera2_is.so:system/vendor/lib/libmmcamera2_is.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera2_isp_modules.so:system/vendor/lib/libmmcamera2_isp_modules.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera2_pproc_modules.so:system/vendor/lib/libmmcamera2_pproc_modules.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera2_q3a_core.so:system/vendor/lib/libmmcamera2_q3a_core.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera2_sensor_modules.so:system/vendor/lib/libmmcamera2_sensor_modules.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera2_stats_algorithm.so:system/vendor/lib/libmmcamera2_stats_algorithm.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera2_stats_modules.so:system/vendor/lib/libmmcamera2_stats_modules.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera2_vpe_module.so:system/vendor/lib/libmmcamera2_vpe_module.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera2_wnr_module.so:system/vendor/lib/libmmcamera2_wnr_module.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_S5K4E1_13P1BA.so:system/vendor/lib/libmmcamera_S5K4E1_13P1BA.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_SKUAA_ST_gc0339.so:system/vendor/lib/libmmcamera_SKUAA_ST_gc0339.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_SKUAB_ST_s5k4e1.so:system/vendor/lib/libmmcamera_SKUAB_ST_s5k4e1.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_ar0542.so:system/vendor/lib/libmmcamera_ar0542.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_common_ar0542_eeprom.so:system/vendor/lib/libmmcamera_common_ar0542_eeprom.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_dw9761b_eeprom.so:system/vendor/lib/libmmcamera_dw9761b_eeprom.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_faceproc.so:system/vendor/lib/libmmcamera_faceproc.so \
-    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_gc2355_8909.so:system/vendor/lib/libmmcamera_gc2355_8909.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_gc0310.so:system/vendor/lib/libmmcamera_gc0310.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_gc2375_ewelly_gophone.so:system/vendor/lib/libmmcamera_gc2375_ewelly_gophone.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_hdr_gb_lib.so:system/vendor/lib/libmmcamera_hdr_gb_lib.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_hdr_lib.so:system/vendor/lib/libmmcamera_hdr_lib.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_hi256.so:system/vendor/lib/libmmcamera_hi256.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_hi553_gophone.so:system/vendor/lib/libmmcamera_hi553_gophone.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_imglib.so:system/vendor/lib/libmmcamera_imglib.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_imx132.so:system/vendor/lib/libmmcamera_imx132.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_imx134.so:system/vendor/lib/libmmcamera_imx134.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_imx135.so:system/vendor/lib/libmmcamera_imx135.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_imx214.so:system/vendor/lib/libmmcamera_imx214.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_mt9m114.so:system/vendor/lib/libmmcamera_mt9m114.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_ofilm_oty5f03_eeprom.so:system/vendor/lib/libmmcamera_ofilm_oty5f03_eeprom.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_ov13850.so:system/vendor/lib/libmmcamera_ov13850.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_ov13850_q13v06k.so:system/vendor/lib/libmmcamera_ov13850_q13v06k.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_ov16825.so:system/vendor/lib/libmmcamera_ov16825.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_ov2680.so:system/vendor/lib/libmmcamera_ov2680.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_ov2680_5987fhq.so:system/vendor/lib/libmmcamera_ov2680_5987fhq.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_ov2680_cht852b.so:system/vendor/lib/libmmcamera_ov2680_cht852b.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_ov2680_zs2p80f1.so:system/vendor/lib/libmmcamera_ov2680_zs2p80f1.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_ov2720.so:system/vendor/lib/libmmcamera_ov2720.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_ov5645.so:system/vendor/lib/libmmcamera_ov5645.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_ov5648_oty5f03.so:system/vendor/lib/libmmcamera_ov5648_oty5f03.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_ov5648_p5v18g.so:system/vendor/lib/libmmcamera_ov5648_p5v18g.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_ov5648_q5v22e.so:system/vendor/lib/libmmcamera_ov5648_q5v22e.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_ov5670_30010a3.so:system/vendor/lib/libmmcamera_ov5670_30010a3.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_ov5670_q5v41b.so:system/vendor/lib/libmmcamera_ov5670_q5v41b.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_ov5670_qc700.so:system/vendor/lib/libmmcamera_ov5670_qc700.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_ov5675_d5v15b.so:system/vendor/lib/libmmcamera_ov5675_d5v15b.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_ov5675_sunrise_gophone.so:system/vendor/lib/libmmcamera_ov5675_sunrise_gophone.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_ov7695.so:system/vendor/lib/libmmcamera_ov7695.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_ov8825.so:system/vendor/lib/libmmcamera_ov8825.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_ov8856_f8v05a.so:system/vendor/lib/libmmcamera_ov8856_f8v05a.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_ov8858.so:system/vendor/lib/libmmcamera_ov8858.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_ov8858_q8v19w.so:system/vendor/lib/libmmcamera_ov8858_q8v19w.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_ov8858_q8v19w_30.so:system/vendor/lib/libmmcamera_ov8858_q8v19w_30.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_ov8865_q8v18a.so:system/vendor/lib/libmmcamera_ov8865_q8v18a.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_ov9724.so:system/vendor/lib/libmmcamera_ov9724.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_pdaf.so:system/vendor/lib/libmmcamera_pdaf.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_pdafcamif.so:system/vendor/lib/libmmcamera_pdafcamif.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_s5k3l1yx.so:system/vendor/lib/libmmcamera_s5k3l1yx.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_s5k3m2xm.so:system/vendor/lib/libmmcamera_s5k3m2xm.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_skuab_shinetech_gc0339.so:system/vendor/lib/libmmcamera_skuab_shinetech_gc0339.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_skuf_ov12830_p12v01c.so:system/vendor/lib/libmmcamera_skuf_ov12830_p12v01c.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_skuf_ov5648_p5v23c.so:system/vendor/lib/libmmcamera_skuf_ov5648_p5v23c.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_sonyimx135_eeprom.so:system/vendor/lib/libmmcamera_sonyimx135_eeprom.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_sp1628.so:system/vendor/lib/libmmcamera_sp1628.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_sp2509_sunrise_gophone.so:system/vendor/lib/libmmcamera_sp2509_sunrise_gophone.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_sunny_ov8858_q8v19w_eeprom.so:system/vendor/lib/libmmcamera_sunny_ov8858_q8v19w_eeprom.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_sunny_p12v01m_eeprom.so:system/vendor/lib/libmmcamera_sunny_p12v01m_eeprom.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_sunny_p5v23c_eeprom.so:system/vendor/lib/libmmcamera_sunny_p5v23c_eeprom.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_sunny_q13v04b_eeprom.so:system/vendor/lib/libmmcamera_sunny_q13v04b_eeprom.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_sunny_q13v06k_eeprom.so:system/vendor/lib/libmmcamera_sunny_q13v06k_eeprom.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_sunny_q5v22e_eeprom.so:system/vendor/lib/libmmcamera_sunny_q5v22e_eeprom.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_sunny_q5v41b_eeprom.so:system/vendor/lib/libmmcamera_sunny_q5v41b_eeprom.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_sunny_q8v18a_eeprom.so:system/vendor/lib/libmmcamera_sunny_q8v18a_eeprom.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_sunrise_pc0fe_eeprom.so:system/vendor/lib/libmmcamera_sunrise_pc0fe_eeprom.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_tintless_algo.so:system/vendor/lib/libmmcamera_tintless_algo.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_tintless_bg_pca_algo.so:system/vendor/lib/libmmcamera_tintless_bg_pca_algo.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_truly_cm7700_eeprom.so:system/vendor/lib/libmmcamera_truly_cm7700_eeprom.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_truly_ov8856_eeprom.so:system/vendor/lib/libmmcamera_truly_ov8856_eeprom.so \
+    vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_tuning.so:system/vendor/lib/libmmcamera_tuning.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmcamera_wavelet_lib.so:system/vendor/lib/libmmcamera_wavelet_lib.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmjpeg.so:system/vendor/lib/libmmjpeg.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libmmosal.so:system/vendor/lib/libmmosal.so \
@@ -212,8 +575,6 @@ PRODUCT_COPY_FILES += \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libthermalclient.so:system/vendor/lib/libthermalclient.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libthermalioctl.so:system/vendor/lib/libthermalioctl.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libtime_genoff.so:system/vendor/lib/libtime_genoff.so \
-    vendor/alcatel/buzz6t/proprietary/vendor/lib/libts_detected_face_hal.so:system/vendor/lib/libts_detected_face_hal.so \
-    vendor/alcatel/buzz6t/proprietary/vendor/lib/libts_face_beautify_hal.so:system/vendor/lib/libts_face_beautify_hal.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libuiblur.so:system/vendor/lib/libuiblur.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libwvdrm_L3.so:system/vendor/lib/libwvdrm_L3.so \
     vendor/alcatel/buzz6t/proprietary/vendor/lib/libwvm.so:system/vendor/lib/libwvm.so \
@@ -225,7 +586,6 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     TimeService \
-    qcrilmsgtunnel \
     shutdownlistener \
     qcnvitems \
     qcrilhook
